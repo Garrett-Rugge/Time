@@ -5,20 +5,20 @@ using namespace std;
 
 
 class Time{
-   public:
-   Time(int h, int m);
-   int gethours() const;
-   int getminutes() const;
-   void addminute();
-   void subtractminute();
-   bool operator==(Time t);
-   void operator++(); //prefix
-   void operator++(int); //postfix
-   void operator--(); //prefix
-   void operator--(int); //postfix
-   private:
-   int hours;
-   int minutes;
+public:
+   	Time(int h, int m);
+   	int gethours() const;
+   	int getminutes() const;
+   	void addminute();
+   	void subtractminute();
+	bool operator==(Time t);
+	void operator++(); //prefix
+	void operator++(int); //postfix
+	void operator--(); //prefix
+	void operator--(int); //postfix
+private:
+	int hours;
+	int minutes;
 };
  
 Time::Time(int h, int m){ 
@@ -29,7 +29,6 @@ Time::Time(int h, int m){
 int Time::gethours() const{ 
 	return hours;
 }
-
 
 int Time::getminutes() const{ 
 	return minutes;
@@ -44,20 +43,20 @@ bool Time::operator==(Time t){
 }
 
 void Time::operator++(){
-  this -> addminute();
+	this->addminute();
 }
 
 void Time::operator++(int){
 	this -> addminute();
 }
+
 void Time::operator--(){
-  this -> subtractminute();
+	this->subtractminute();
 }
 
 void Time::operator--(int){
-	this -> subtractminute();
+	this->subtractminute();
 }
-
 
 void Time::addminute() { 
 	minutes++;
@@ -95,10 +94,13 @@ void subtract_test(){ //tests decrement and subtract_minute functions for Time c
 		if(a == c){
 			a.subtractminute();
 			if(a == d)
-				cout << "Subtract test passed." << endl;
+				cout << "Subtract tests passed." << endl;
 		}
 	}
 }
+
+
+
 int main()
 {
 	subtract_test();
@@ -107,6 +109,6 @@ int main()
 	for (int i=0; i<75; i++){
 	//	sleep(60); //sleep 60 seconds
 		++start; //add a minute to start
-}
+	}
 	if (start == end) cout << "class dismissed";
 }
